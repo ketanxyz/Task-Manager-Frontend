@@ -4,6 +4,11 @@
 
 This is the frontend part of a full-stack task management application built with React, Vite, and Tailwind CSS. It provides a user-friendly interface for managing tasks, user authentication, and administrative features.
 
+## Repositories
+
+- **Frontend**: https://github.com/ketanxyz/Task-Manager-Frontend.git
+- **Backend**: https://github.com/ketanxyz/Task-Manager-backend.git
+
 ## Features
 
 - **User Authentication**: Login and signup functionality
@@ -30,48 +35,59 @@ This is the frontend part of a full-stack task management application built with
 - Node.js (version 16 or higher)
 - npm or yarn
 - MongoDB (for the backend)
-- Backend server running (see Backend README for setup)
+- Backend server running
 
 ## Installation and Setup
 
-1. **Clone the repository**:
+### Backend Setup
+
+1. **Clone the backend repository**:
    ```bash
-   git clone https://github.com/ketanxyz/Task-Manager-Frontend.git
-   cd Task-Manager-Frontend
+   git clone https://github.com/ketanxyz/Task-Manager-backend.git
+   cd Task-Manager-backend
    ```
 
-2. **Navigate to the frontend directory**:
-   ```bash
-   cd frontend
-   ```
-
-3. **Install dependencies**:
+2. **Install backend dependencies**:
    ```bash
    npm install
    ```
 
-4. **Set up environment variables for the backend**:
-   - Navigate to the `Backend` folder
-   - Create a `.env` file with the following variables:
+3. **Set up environment variables**:
+   - Create a `.env` file in the backend root directory with the following variables:
      ```
      MONGO_URL=your_mongodb_connection_string
      JWT_SECRET=your_jwt_secret_key
      CLIENT_URL=http://localhost:5173
+     ADMIN_INVITE_TOKEN=4588944
+     PORT=8000
      ```
-   - Install backend dependencies and start the backend server:
-     ```bash
-     cd ../Backend
-     npm install
-     npm run dev
-     ```
+   - The `ADMIN_INVITE_TOKEN` is used to create the initial admin account.
 
-5. **Start the frontend development server**:
+4. **Start the backend server**:
    ```bash
-   cd ../frontend
+   npm run dev
+   ```
+   The backend will run on `http://localhost:8000`
+
+### Frontend Setup
+
+1. **Clone the frontend repository** (in a separate terminal or directory):
+   ```bash
+   git clone https://github.com/ketanxyz/Task-Manager-Frontend.git
+   cd Task-Manager-Frontend/frontend
+   ```
+
+2. **Install frontend dependencies**:
+   ```bash
+   npm install
+   ```
+
+3. **Start the frontend development server**:
+   ```bash
    npm run dev
    ```
 
-6. **Open your browser** and navigate to `http://localhost:5173`
+4. **Open your browser** and navigate to `http://localhost:5173`
 
 ## Available Scripts
 
@@ -105,8 +121,6 @@ frontend/
 └── eslint.config.js
 ```
 
-### for creating a admin account we need a ADMIN_INVITE_TOKEN=4588944
-
 ## Contributing
 
 1. Fork the repository
@@ -116,5 +130,7 @@ frontend/
 5. Submit a pull request
 
 ## License
+
+This project is licensed under the ISC License.
 
 This project is licensed under the ISC License.
