@@ -105,6 +105,8 @@ frontend/
 └── eslint.config.js
 ```
 
+### for creating a admin account we need a ADMIN_INVITE_TOKEN=4588944
+
 ## Contributing
 
 1. Fork the repository
